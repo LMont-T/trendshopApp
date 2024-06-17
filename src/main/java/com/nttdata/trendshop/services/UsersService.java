@@ -1,6 +1,7 @@
 package com.nttdata.trendshop.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,5 +18,13 @@ public class UsersService {
 	
 	public List<Users> findAllUsers() {
         return usersRepository.findAll();
+    }
+
+    public void addUsers(Users utente){
+        usersRepository.save(utente);
+    }
+
+    public Optional<Users> getUser(Integer id){
+        return usersRepository.findById(id);
     }
 }

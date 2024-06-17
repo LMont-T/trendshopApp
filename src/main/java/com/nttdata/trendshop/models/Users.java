@@ -1,9 +1,6 @@
 package com.nttdata.trendshop.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Users {
@@ -16,7 +13,7 @@ public class Users {
 	private String address;
 	
 	
-	
+	public Users (){}
 	public Users(Integer id, String name, String surname, String address) {
 		this.id = id;
 		this.name = name;
