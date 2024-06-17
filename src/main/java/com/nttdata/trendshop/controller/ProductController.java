@@ -13,15 +13,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.nttdata.trendshop.models.CartItem;
 import com.nttdata.trendshop.models.Product;
+import com.nttdata.trendshop.models.Users;
 import com.nttdata.trendshop.services.ProductService;
+import com.nttdata.trendshop.services.UsersService;
 
 @RestController
 @RequestMapping("/trendshop")
 public class ProductController {
-
+	
+	
     @Autowired
     private ProductService productService;
-
+    
+    
+    
     @GetMapping("/searchProducts")
     public List<Product> searchProducts() {
         return productService.findAllProducts();
